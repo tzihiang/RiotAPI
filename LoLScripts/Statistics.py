@@ -34,4 +34,4 @@ def _get_role_statistics(summonerName, region):
     print(matchHistory)
 
 
-_role_statistics("TheEichelTower88", "na1")
+_get_role_statistics("TheEichelTower88", "na1")
