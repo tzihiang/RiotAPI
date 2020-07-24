@@ -1,4 +1,4 @@
-API_KEY = "RGAPI-c0aeed68-f9b2-43f0-93a3-67192f41432e"  # Changes daily
+API_KEY = "GET_YOUR_OWN_API_KEY"  # Changes daily
 
 # Account calls for Riot Account API
 
@@ -39,10 +39,10 @@ SUMMONER_API_VERSIONS = {
     'version': "4",
 }
 
-#https://na1.api.riotgames.com/lol/match/v4/matchlists/by-account/LFTpvbxYLsGS_jn22cW5s0jVRnyBWqYBn6toQfDyHdCvsvuSrowSwmFF?api_key=RGAPI-c0aeed68-f9b2-43f0-93a3-67192f41432e
+# https://na1.api.riotgames.com/lol/match/v4/matchlists/by-account/LFTpvbxYLsGS_jn22cW5s0jVRnyBWqYBn6toQfDyHdCvsvuSrowSwmFF?api_key=RGAPI-c0aeed68-f9b2-43f0-93a3-67192f41432e
 MATCH_URL = {
-    'base' : "https://{region}.api.riotgames.com/lol/match/v{version}/{call_type}/?api_key={api_key}",
-    'by-account' : "matchlists/by-account/{encryptedAccountId}"
+    'base': "https://{region}.api.riotgames.com/lol/match/v{version}/{call_type}/?api_key={api_key}",
+    'by-account': "matchlists/by-account/{encryptedAccountId}"
 }
 
 

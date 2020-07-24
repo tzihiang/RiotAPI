@@ -10,6 +10,3 @@ def _get_champion_by_id(id):
         if (v['key'] == str(id)):
             return k
     return "Champion not found"
-
-
-print(_get_champion_by_id(26))

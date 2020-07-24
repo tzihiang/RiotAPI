@@ -17,4 +17,4 @@ class MatchAPI(object):
                 api_key=self.api_key
             )
         )
-        print(response.json())
+        return response.json()
