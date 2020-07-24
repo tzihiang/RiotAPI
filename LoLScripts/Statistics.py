@@ -30,7 +30,7 @@ def _get_match_history(summonerName, region):
 
 
 def _get_role_statistics(summonerName, region):
-    matchHistory = _matchHistory(summonerName, region)['matches']
+    matchHistory = _get_match_history(summonerName, region)['matches']
     print(matchHistory)
 
 
