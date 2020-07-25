@@ -53,6 +53,7 @@ def _get_champion_statistics(summonerName, region):
             champion_list[c] = 1
         else:
             champion_list[c] = int(champion_list.get(c)) + 1
+    print(champion_list)
 
 
 _get_champion_statistics("TheEichelTower88", "na1")

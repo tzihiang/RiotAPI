@@ -1,4 +1,4 @@
-API_KEY = "RGAPI-600fb0cd-12e9-4ce3-9868-77937c721388"  # Changes daily
+API_KEY = "GET_YOUR_OWN_API_KEY"  # Changes daily
 
 # Account calls for Riot Account API
 
