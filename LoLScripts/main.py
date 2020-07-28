@@ -22,9 +22,11 @@ def main():
     # api = SummonerAPI(API_KEY)
     # api._get_accountID_from_summonerName("TheEichelTower88", "na1")
 
-    api = MatchAPI(API_KEY)
-    api._get_match_history(
-        "LFTpvbxYLsGS_jn22cW5s0jVRnyBWqYBn6toQfDyHdCvsvuSrowSwmFF", "na1")
+    # api = MatchAPI(API_KEY)
+    # api._get_match_history(
+    #     "LFTpvbxYLsGS_jn22cW5s0jVRnyBWqYBn6toQfDyHdCvsvuSrowSwmFF", "na1")
+
+    print(API_KEY)
 
 
 if __name__ == "__main__":
