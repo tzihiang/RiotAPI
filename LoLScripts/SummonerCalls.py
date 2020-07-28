@@ -21,4 +21,4 @@ class SummonerAPI(object):
 
     def _get_accountID_from_summonerName(self, summonerName, region):
         r = self._get_summoner_info_from_summonerName(summonerName, region)
-        return r["accountId"]
+        return (r["accountId"])

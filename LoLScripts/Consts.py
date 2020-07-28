@@ -54,7 +54,8 @@ SUMMONER_API_VERSIONS = {
 # https://na1.api.riotgames.com/lol/match/v4/matchlists/by-account/LFTpvbxYLsGS_jn22cW5s0jVRnyBWqYBn6toQfDyHdCvsvuSrowSwmFF?api_key=RGAPI-c0aeed68-f9b2-43f0-93a3-67192f41432e
 MATCH_URL = {
     'base': "https://{region}.api.riotgames.com/lol/match/v{version}/{call_type}/?api_key={api_key}",
-    'by-account': "matchlists/by-account/{encryptedAccountId}"
+    'by-account': "matchlists/by-account/{encryptedAccountId}",
+    'by-match-id': "matches/{matchId}"
 }
 
 
