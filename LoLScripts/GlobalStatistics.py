@@ -21,6 +21,9 @@ summonerNames = LEAGUE_DB._retrieve_5X5_SOLO_accountID(region, "challenger")
 # 2. Append those match histories into a global array matchIDs
 for summoner in summonerNames:
     try:
-        print(MATCH_DB._get_match_ids_from_summoner(summoner, region))
+        matchIDs.append(
+            MATCH_DB._get_match_ids_from_summoner(summoner, region))
     except:
-        print(type(summoner))
+        pass
+
+matchIDs = list(dict.fromkeys(matchIDs))
