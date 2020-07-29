@@ -58,4 +58,4 @@ def _get_summoner_champion_win_rate(summonerName, region, max=30):
     return win_rates
 
 
-# print(_get_summoner_champion_win_rate("TSM", "na1", 30))
+print(_get_summoner_champion_win_rate("TSM", "na1", 10))
