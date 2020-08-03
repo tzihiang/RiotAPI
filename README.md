@@ -13,9 +13,13 @@ The libraries here are specific for League of Legends only. Please refer to LoLS
 
 ## Navigating the library
 main.py is the main driver behind all the information you would want to retrieve. It directly imports all the calls from the library.
+
 Consts.py consists of constants that are rarely changed and should not be touched unless Riot chooses to change the naming convention of its request URLs.
+
 Call scripts (with the suffix -Calls.py) such as MatchCalls.py are calls that are specifically made towards the API categorised by riot [here](https://developer.riotgames.com/apis). This is done to acheive order between the call types so that troubleshooting would be done easier. 
+
 PlayerStatistics.py and GlobalStatistics.py are player and global specific respectively, which will be covered later on.
+
 Champions.py requires you to import DDragon, so please do so correctly! In order to support future releases of DDragon, I chose not to directly call from their json version of it on URL since the URL is always changing. Instead, updating DDragon might be easier and more up-to-date. Please let me know if you have any suggestions to streamline this process to prevent the cumbersome process of updating everytime a new patch is out!
 
 ## Functions in PlayerStatistics:
@@ -46,5 +50,5 @@ PlayerStatistics needs at least the Summoner's name and respective region minima
 
     Example output: ```GOLD IV```
 
-## Functions of GlobalStatistics:
+## Functions in GlobalStatistics:
 ### Global Statistics is still a work in progress, as fetching all the data is a very expensive process (at least the way I see it) and I cannot get it running in real time fetches. If you have any idea, do feel free to contribute or give suggestions as you see fit!
