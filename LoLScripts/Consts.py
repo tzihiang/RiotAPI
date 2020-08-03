@@ -1,4 +1,4 @@
-API_KEY = "GET_YOUR_OWN_API_KEY"  # Changes daily
+API_KEY = open("API_KEY.txt", "r").read()  # Changes daily
 
 # Account calls for Riot Account API
 
@@ -20,6 +20,12 @@ LEAGUE_URL = {
     'by-league-entries': "entries/{queue}/{tier}/{division}",
     'by-summoner-id': "entries/by-summoner/{encryptedSummonerId}",
     'by-league': "{leagueType}/by-queue/{queue}",
+    'top-leagues': "{tier}/by-queue/{queue}"
+}
+
+LEAGUE_QUEUE_TYPES = {
+    "1": "RANKED_SOLO_5x5",
+    "2": "RANKED_FLEX_SR"
 }
 
 LEAGUE_API_VERSIONS = {
@@ -29,6 +35,12 @@ LEAGUE_API_VERSIONS = {
 LEAGUE_REGIONS = [
     "br1", "eun1", "euw1", "jp1", "kr", "la1", "la2", "na1", "oc1", "ru", "tr1"
 ]
+
+LEAGUE_TOP_LEAGUES_TYPES = {
+    "challenger": "challengerleagues",
+    "grandmaster": "grandmasterleagues",
+    "master": "masterleagues"
+}
 
 SUMMONER_URL = {
     'base': "https://{region}.api.riotgames.com/lol/summoner/v{version}/summoners/{call_type}/?api_key={api_key}",
@@ -42,7 +54,8 @@ SUMMONER_API_VERSIONS = {
 # https://na1.api.riotgames.com/lol/match/v4/matchlists/by-account/LFTpvbxYLsGS_jn22cW5s0jVRnyBWqYBn6toQfDyHdCvsvuSrowSwmFF?api_key=RGAPI-c0aeed68-f9b2-43f0-93a3-67192f41432e
 MATCH_URL = {
     'base': "https://{region}.api.riotgames.com/lol/match/v{version}/{call_type}/?api_key={api_key}",
-    'by-account': "matchlists/by-account/{encryptedAccountId}"
+    'by-account': "matchlists/by-account/{encryptedAccountId}",
+    'by-match-id': "matches/{matchId}"
 }
 
 
