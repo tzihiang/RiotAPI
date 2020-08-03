@@ -75,12 +75,6 @@ class MatchAPI(object):
         else:
             return False
 
-        def _get_summoner_winrate(summonerName, region):
-            matches = []
-            for match in self._get_match_history(summonerName, region)['matches']:
-                matches.append(match['gameId'])
-            # Matches is now a list of gameIds
-
 
 # m = MatchAPI(API_KEY)
 # print(m._check_match_win("TheEichelTower88", "na1", "3489970152"))

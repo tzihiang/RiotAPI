@@ -13,10 +13,10 @@ MATCH_DB = MatchAPI(API_KEY)
 SUMMONER_DB = SummonerAPI(API_KEY)
 
 
-def _get_summoner_champion_play_rate(summonerName, region):
+def _get_summoner_champion_play_rate(summonerName, region, max=30):
     matchHistory = MATCH_DB._get_match_history(summonerName, region)['matches']
     champion_list = {}
-    for matches in matchHistory:
+    for matches in matchHistory[0:max]:
         c = Champions._get_champion_by_id(matches['champion'])
         if c not in champion_list:
             champion_list[c] = 1
@@ -54,8 +54,20 @@ def _get_summoner_champion_win_rate(summonerName, region, max=30):
         win_rates[c][1] += 1
     for champion in win_rates:
         win_rates[champion] = str(
-            round(win_rates[champion][0]/win_rates[champion][1] * 100, 2)) + " % over " + str(win_rates[champion][1]) + " games"
+            round(win_rates[champion][0]/win_rates[champion][1] * 100, 2)) + " % over " + str(win_rates[champion][1]) + " game(s)"
     return win_rates
 
 
-# print(_get_summoner_champion_win_rate("TSM", "na1", 30))
+def _get_summoner_ranked_stats(summonerName, region):
+    encryptedSummonerId = SUMMONER_DB._get_summonerId_from_summonerName(
+        summonerName, region)
+    r = LEAGUE_DB._get_summoner_league_info(region, encryptedSummonerId)[0]
+    tier = r['tier']
+    rank = r['rank']
+    return tier + " " + rank
+
+
+# print(_get_summoner_champion_play_rate("TSM", "na1"))
+# print(_get_summoner_win_rate("TSM", "na1"))
+# print(_get_summoner_champion_win_rate("TSM", "na1"))
+# print(_get_summoner_ranked_stats("TSM", "na1"))
